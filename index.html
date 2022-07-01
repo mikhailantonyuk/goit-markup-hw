@@ -378,7 +378,55 @@
                         <use href="./image/icons.svg#icon-close" width="11" height="11"></use>
                     </svg>
                 </button>
-                <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+                <p class="modal-tittle">Оставьте свои данные, мы вам перезвоним</p>
+                <form class="modal-form">
+                    <label class="modal-label">
+                        Имя
+                        <input 
+                            type="text" 
+                            class="input-modal" 
+                            name="user-name"
+                            required>
+                        </label>
+                    <label class="modal-label">
+                        Телефон
+                        <input 
+                            type="tel" 
+                            class="input-modal" 
+                            name="user-tel"
+                            required
+                            pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                            minlength="13"
+                            maxlength="13"
+                            title="+380 (96) 111-11-11">
+                    </label>
+                    <label class="modal-label">
+                        Почта
+                        <input 
+                            type="email" 
+                            class="input-modal" 
+                            name="user-mail"
+                            required>
+                    </label>
+                    <div class="modal-field">
+                    <label class="modal-label" for="modal-text">Комментарий</label>
+                        <textarea 
+                            name="modal-text" 
+                            id="modal-text" 
+                            class="modal-text"
+                            placeholder="Введите текст"
+                        ></textarea>
+                        
+                    </div>
+                    <fieldset>
+                        <legend></legend>
+                        <label for="yes">
+                            <input type="checkbox">
+                        </label>
+                    </fieldset>  
+                    <button type="submit" class="hero-button modal-btn">Отправить</button>
+                </form>
+           
             </div>
         
     </div>
